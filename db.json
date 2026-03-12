@@ -152,7 +152,7 @@
       "confirmPassword": "123456",
       "name": "long cao",
       "phone": "0328770709",
-      "role": "user",
+      "role": "admin",
       "createdAt": "2025-12-25T06:04:40.259Z",
       "status": true,
       "id": 11
