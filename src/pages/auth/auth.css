@@ -27,6 +27,8 @@
     background-color: #0d111c;
     width: 90%;
     max-width: 500px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
     padding: 20px 30px;
     border-radius: 10px;
     border: 1px solid #202a45;
@@ -80,26 +82,28 @@
   top: 50%;
   right: 12px;
   transform: translateY(-50%);
+    z-index: 2;
 
   background: transparent;
   border: none;
   color: #cbd5e1;
   font-size: 18px;
 
-  padding-bottom: 30px;
-  width: auto;
-  height: auto;
+    margin: 0;
+    padding: 0;
+    width: 28px;
+    height: 28px;
 
   display: inline-flex;
   align-items: center;
-  justify-content: right;
+    justify-content: center;
 
-  pointer-events: none;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .modal-layout .password-toggle i {
-  pointer-events: auto;
-  cursor: pointer;
+    line-height: 1;
 }
 
 .modal-layout .password-toggle:focus {
@@ -108,16 +112,21 @@
 
 
 /* Ensure validation messages don't get overlapped by the icon */
-.modal-layout .input-with-toggle + .text-danger {
+.modal-layout .input-with-toggle .field-error {
     display: block;
     margin-top: 6px;
     margin-bottom: 0;
     padding-right: 52px; /* leave space so long lines don't go under the icon */
+    min-height: 14px;
     font-size: 12px;
     line-height: 14px;
     color: red;
     position: relative;
     z-index: 2; /* sit above the icon visually */
+}
+
+.modal-layout .input-with-toggle .field-error:not(.visible) {
+    visibility: hidden;
 }
 .modal-layout .login-box .couple {
     display: flex;
@@ -128,7 +137,7 @@
     flex: 1;
 }
 
-.modal-layout .login-box button {
+.modal-layout .login-box > button {
     width: 100%;
     height: 45px;
     border-radius: 25px;

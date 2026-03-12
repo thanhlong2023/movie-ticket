@@ -239,9 +239,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
               >
                 {showPassword ? <i className="bi bi-eye-slash"></i> : <i className="bi bi-eye"></i>}
               </button>
-              {errors.password && (
-                <p className="text-danger">{errors.password}</p>
-              )}
+              <p
+                className={`text-danger field-error ${
+                  errors.password ? "visible" : ""
+                }`}
+              >
+                {errors.password || "\u00a0"}
+              </p>
             </div>
             <div className="input-with-toggle">
               <input
@@ -259,9 +263,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
               >
                 {showConfirmPassword ? <i className="bi bi-eye-slash"></i> : <i className="bi bi-eye"></i>}
               </button>
-              {errors.confirmPassword && (
-                <p className="text-danger">{errors.confirmPassword}</p>
-              )}
+              <p
+                className={`text-danger field-error ${
+                  errors.confirmPassword ? "visible" : ""
+                }`}
+              >
+                {errors.confirmPassword || "\u00a0"}
+              </p>
             </div>
           </div>
 
