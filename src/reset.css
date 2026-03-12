@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#root {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.react-loaded #root {
+  opacity: 1 !important;
+}
+
+.main-root {
+  height: 100vh !important;
+  background-color: #121212 !important;
+  color: white !important;
+  width: 100% !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+option {
+  border: none;
+  outline: none;
+  background-color: white;
+}

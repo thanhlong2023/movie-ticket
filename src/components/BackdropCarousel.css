@@ -1,0 +1,104 @@
+.backdrop-carousel-container {
+  width: 100%;
+  height: 840px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.backdropSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.backdrop-slide-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.backdrop-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.backdrop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.movie-title-hero {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Custom Swiper Styles */
+.backdropSwiper .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+.backdropSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--primary-color, #e50914);
+}
+
+.backdropSwiper .swiper-button-next,
+.backdropSwiper .swiper-button-prev {
+  color: white;
+  --swiper-navigation-size: 44px; /* Default desktop size */
+}
+
+@media (max-width: 1200px) {
+  .backdrop-carousel-container {
+    height: 520px;
+  }
+  .backdropSwiper .swiper-button-next,
+  .backdropSwiper .swiper-button-prev {
+    --swiper-navigation-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .backdrop-carousel-container {
+    height: 420px;
+  }
+  .backdropSwiper .swiper-button-next,
+  .backdropSwiper .swiper-button-prev {
+    --swiper-navigation-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .backdrop-carousel-container {
+    height: 320px;
+  }
+  .movie-title-hero {
+    font-size: 1.5rem;
+  }
+  .backdropSwiper .swiper-button-next,
+  .backdropSwiper .swiper-button-prev {
+    --swiper-navigation-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .backdrop-carousel-container {
+    height: 240px;
+  }
+  .backdropSwiper .swiper-button-next,
+  .backdropSwiper .swiper-button-prev {
+    --swiper-navigation-size: 20px;
+  }
+}

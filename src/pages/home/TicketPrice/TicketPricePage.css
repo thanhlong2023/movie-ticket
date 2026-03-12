@@ -1,0 +1,261 @@
+.ticket-price-page,
+.ticket-price-page * {
+  box-sizing: border-box;
+}
+
+.ticket-price-page {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ticket-price-page .content {
+  width: 100%;
+}
+
+.ticket-price-page .center-text {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0;
+}
+
+.ticket-price-page h1 {
+  text-align: center;
+  font-size: 24px !important;
+  color: #ffffff;
+  font-weight: 700 !important;
+}
+
+.ticket-price-page h2 {
+  margin: 32px 0 16px 0 !important;
+  font-size: 18px !important;
+  font-weight: 600;
+  color: #fff;
+}
+
+.ticket-price-page .note {
+  font-size: 14;
+  margin-top: 16px;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+/* ================= TABLE ================= */
+.ticket-price-page .table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ticket-price-page .price-table {
+  width: 1280px;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.ticket-price-page .price-table th,
+.ticket-price-page .price-table td {
+  border: 1px solid #333;
+  padding: 12px 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.ticket-price-page .price-table th:first-child,
+.ticket-price-page .price-table td:first-child {
+  text-align: left;
+}
+
+.ticket-price-page .price-table thead th {
+  color: #94a3b8;
+}
+
+/* ================= COLOR ================= */
+.ticket-price-page .highlight {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.ticket-price-page .sweetbox {
+  color: #ff6666;
+  font-weight: 600;
+}
+
+/* ================= NOTES ================= */
+.ticket-price-page .notes {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #d1d5db;
+  line-height: 24px;
+}
+
+.ticket-price-page .notes strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.ticket-price-page .notes ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 32px;
+}
+
+.ticket-price-page .notes li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  line-height: 1.45;
+  color: #d1d5db;
+}
+
+/* ================= CẤP 1 ================= */
+/* * Tiêu đề lớn */
+.ticket-price-page .notes > ul > li::before {
+  content: "*";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ================= CẤP 2 ================= */
+/* • Nội dung */
+.ticket-price-page .notes ul ul > li::before {
+  content: "•";
+  font-weight: 400;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d1d5db;
+}
+
+/* ================= CẤP 3 ================= */
+/* - Gạch ngang */
+.ticket-price-page .notes ul ul ul > li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #9ca3af;
+}
+
+/* ================= THỤT LỀ THEO CẤP ================= */
+.ticket-price-page .notes ul ul {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.ticket-price-page .notes ul ul ul {
+  margin-left: 16px;
+  margin-top: 2px;
+}
+
+/* ================= TEXT NHỎ ================= */
+.ticket-price-page .note-small {
+  display: block;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+/* ================= HR ================= */
+.ticket-price-page .notes hr {
+  border: none;
+  border-top: 1px dashed #374151;
+  margin: 24px 0;
+}
+
+/* ================= CẢNH BÁO ================= */
+.ticket-price-page .notes-warning {
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* ================= CẢM ƠN ================= */
+.ticket-price-page .notes-thanks {
+  margin-top: 12px;
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+/* ================= LIÊN HỆ ================= */
+.ticket-price-page .notes-contact {
+  margin-top: 16px;
+  color: #ffffff;
+}
+
+.ticket-price-page .notes-contact b {
+  font-weight: 600;
+}
+
+.ticket-price-page .notes-list.notes-list-spaced {
+  margin-top: 32px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .ticket-price-page {
+    margin: 0 16px;
+  }
+
+  .ticket-price-page h1 {
+    font-size: 24px;
+  }
+
+  .ticket-price-page h2 {
+    font-size: 18px;
+  }
+
+  .ticket-price-page .price-table {
+    width: 736px;
+  }
+
+  .ticket-price-page .price-table th,
+  .ticket-price-page .price-table td {
+    font-size: 12px;
+  }
+
+  .ticket-price-page .notes {
+    max-width: 736px;
+  }
+
+  .ticket-price-page .notes li {
+    padding-left: 12px;
+  }
+
+  .ticket-price-page .notes ul ul ul {
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  .ticket-price-page h1 {
+    font-size: 20px;
+  }
+
+  .ticket-price-page h2 {
+    font-size: 16px;
+  }
+
+  .ticket-price-page .price-table {
+    width: 640px;
+  }
+
+  .ticket-price-page .notes {
+    max-width: 358px;
+  }
+
+    .ticket-price-page .notes li {
+    padding-left: 0;
+  }
+
+  .ticket-price-page .notes ul ul ul {
+    margin-left: 0;
+  }
+}
+

@@ -1,0 +1,104 @@
+.home-carousel-vertical-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-carousel-vertical-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-animation-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-animation-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.promo-img-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.promo-img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.promo-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.promo-card-title {
+  display: none;
+}
+
+/* Responsive: Horizontal scroll on mobile/tablet */
+@media screen and (max-width: 991.98px) {
+  .home-carousel-vertical-container {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth;
+
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .home-carousel-vertical-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .home-carousel-vertical-content {
+    flex-direction: row !important;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .promo-img-container {
+    flex: 0 0 auto;
+  }
+
+  .promo-card-title {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+/* Tablet: 3 items fit exactly on screen */
+@media screen and (min-width: 577px) and (max-width: 991.98px) {
+  .promo-img-container {
+    width: calc((100% - 40px) / 3);
+    min-width: calc((100% - 40px) / 3);
+  }
+}
+
+/* Mobile: 2 items fit exactly on screen */
+@media screen and (max-width: 576px) {
+  .promo-img-container {
+    width: calc((100% - 20px) / 2);
+    min-width: calc((100% - 20px) / 2);
+  }
+}

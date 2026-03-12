@@ -1,0 +1,27 @@
+.ticket-detail {
+  --ticket-cut-y: 58%;
+  --ticket-hole-size: 30px;
+}
+
+.ticket-detail .booking-hole {
+  width: var(--ticket-hole-size);
+  height: var(--ticket-hole-size);
+  top: var(--ticket-cut-y);
+}
+
+.ticket-detail .booking-hole--left {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.ticket-detail .booking-hole--right {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.ticket-detail .ticket-cut-line {
+  top: var(--ticket-cut-y);
+  left: 0;
+  border-style: dashed;
+  opacity: 0.5;
+}

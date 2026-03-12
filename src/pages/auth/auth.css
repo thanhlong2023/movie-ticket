@@ -1,0 +1,177 @@
+/* ====== MODALS ====== */
+.modal-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    padding: 40px 20px;
+}
+
+.modal-layout .blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    background-color: rgba(13, 17, 28, 0.4);
+    z-index: 9998;
+}
+
+.modal-layout .login-container {
+    background-color: #0d111c;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 1px solid #202a45;
+    z-index: 10000;
+}
+
+.modal-layout .couple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-layout .close {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.modal-layout .login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-layout .login-box label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.modal-layout .login-box input {
+    width: 100%;
+    height: 45px;
+    color: white;
+    padding: 15px 10px !important;
+    border: 1px solid #35445e !important;
+    border-radius: 10px !important;
+    font-size: 17px !important;
+    background-color: transparent !important;
+}
+
+/* Password toggle */
+.modal-layout .input-with-toggle {
+    position: relative;
+    display: block; /* ensure error text flows below */
+}
+.modal-layout .input-with-toggle input {
+    padding-right: 52px !important; /* space for icon inside the input */
+}
+.modal-layout .password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 18px;
+
+  padding-bottom: 30px;
+  width: auto;
+  height: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: right;
+
+  pointer-events: none;
+}
+
+.modal-layout .password-toggle i {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.modal-layout .password-toggle:focus {
+  outline: none;
+}
+
+
+/* Ensure validation messages don't get overlapped by the icon */
+.modal-layout .input-with-toggle + .text-danger {
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 0;
+    padding-right: 52px; /* leave space so long lines don't go under the icon */
+    font-size: 12px;
+    line-height: 14px;
+    color: red;
+    position: relative;
+    z-index: 2; /* sit above the icon visually */
+}
+.modal-layout .login-box .couple {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-layout .login-box .couple > div {
+    flex: 1;
+}
+
+.modal-layout .login-box button {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.modal-layout .forgot-password {
+    text-align: end;
+    margin-top: 5px;
+}
+
+.modal-layout .forgot-password a {
+    color: rgb(255, 55, 55);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.modal-layout .login-box .link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.modal-layout .login-box .link a {
+    color: #ff4242;
+    text-decoration: none;
+}
+
+.modal-layout .text-danger {
+    color: red;
+    margin-top: 4px;
+    line-height: 12px;
+    font-size: 12px;
+}
+
+.btn-red-gradient {
+    background: linear-gradient(to right, #dc2626, #fc6060);
+    font-weight: bold !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

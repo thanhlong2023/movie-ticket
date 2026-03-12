@@ -1,0 +1,190 @@
+/* ========================================
+   FESTIVAL.CSS - Festival pages specific
+   Matches original Festival.css design
+   ======================================== */
+
+/* ====== FESTIVAL LIST PAGE ====== */
+.festival-main { width: 100%; }
+
+/* List page banner */
+.festival-list-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+}
+
+.festival-list-banner img {
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+.listContent {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 0px 24px 0px;
+}
+
+.avata {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.avata img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bodyConten {
+  border-bottom: 1px solid #374151;
+  padding: 20px 0px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bodyConten_NoBorder{
+  padding: 20px 0px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bodyConten:hover { background-color: rgba(255,255,255,0.02); }
+.bodyConten_NoBorder:hover { background-color: rgba(255,255,255,0.02); }
+
+.festival-detail-description {
+  color: #d1d5db;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.festival-detail-description h1,
+.festival-detail-description h2,
+.festival-detail-description h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 28px 0 14px;
+}
+
+.festival-detail-description p {
+  margin-bottom: 18px;
+}
+
+.festival-detail-description ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.festival-detail-description li {
+  margin-bottom: 12px;
+}
+
+.festival-detail-description strong {
+  color: #ffffff;
+}
+
+.festival-detail-description a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+
+.festival-row { display: flex; gap: 24px;}
+.festival-content { flex: 1; min-width: 0; }
+.festival-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.title1 { display: none; color: white; font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+.title2 { color: white; font-size: 16px; font-weight: 600; margin: 0; flex: 1; }
+.date { color: #9CA3AF; font-size: 13px; white-space: nowrap; margin-left: 16px; }
+
+/* ====== FESTIVAL DETAIL PAGE ====== */
+.festival-detail {width: 100%; }
+
+.festival-detail-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.festival-detail-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+
+.festival-schedule { margin-top: 40px; }
+.festival-schedule-banner {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  display: block;
+}
+
+
+/* ====== TABLET (≤768px) ====== */
+@media (max-width: 768px) {
+  .festival-list-banner img { max-height: 432px; }
+  .listContent { padding: 20px 16px 24px 16px; }
+  .title2 { display: none; }
+  .title1 { display: block; margin-bottom: 16px; }
+  .bodyConten { padding: 24px 0px; }
+  .avata { width: 150px; height: 150px; }
+  .date { font-size: 12px; margin: 0;}
+  .festival-detail { padding-top: 32px; }
+  /* .festival-detail-content { padding: 24px 16px 48px; } */
+  .festival-detail-title { font-size: 22px; }
+}
+
+/* ====== MOBILE (≤390px) ====== */
+@media (max-width: 390px) {
+  .festival-list-banner img { max-height: 220px; }
+  .bodyConten { padding: 20px 0px; }
+  .listContent { padding: 24px 16px 28px 16px; }
+  .avata { width: 150px; height: 150px; }
+  .festival-detail-title { font-size: 18px; }
+}
+
+.pagination button {
+  min-width: 130px;
+  padding: 8px 13px;
+  border:#1E293B 1px solid;
+  border-radius: 10px;
+  background: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.35);
+  border:#fff 1px solid;
+}
+
+.pagination button:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
+

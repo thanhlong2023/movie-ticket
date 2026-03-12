@@ -1,0 +1,104 @@
+.notfound-container {
+  height: 100vh;
+  background: url("https://res.cloudinary.com/dyle696tg/image/upload/v1760453871/page-not-found_nc2kqu.jpg")
+    no-repeat center center/cover;
+}
+
+.notfound-box {
+  max-width: 450px;
+  width: 100%;
+  color: white;
+}
+
+.notfound-container h1 {
+  font-weight: 600 !important;
+  transition: all 0.3s ease;
+  font-size: 250px;
+}
+
+.notfound-container h1:hover {
+  transform: scale(1.08);
+  color: #ff4c4c !important;
+  cursor: default;
+}
+
+.notfound-container h2 {
+  color: #ff6b6b;
+}
+
+/* Button */
+.notfound-container button,
+.notfound-container .btn-danger {
+  background-color: #ff6b6b;
+  border: none;
+  transition: background-color 0.3s ease;
+  height: 45px;
+  transition: all 0.3s ease;
+  width: 35%;
+}
+
+.notfound-container button:hover,
+.notfound-container .btn-danger:hover {
+  background-color: #ff4c4c;
+  width: 40%;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .notfound-container h1 {
+    font-size: 200px;
+  }
+  .notfound-container h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .notfound-container h1 {
+    font-size: 160px;
+  }
+  .notfound-container h2 {
+    font-size: 22px;
+  }
+  .notfound-container .notfound-box {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notfound-container h1 {
+    font-size: 120px;
+  }
+  .notfound-container h2 {
+    font-size: 20px;
+  }
+  .notfound-container button,
+  .notfound-container .btn-danger {
+    width: 50%;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .notfound-container h1 {
+    font-size: 80px;
+  }
+  .notfound-container h2 {
+    font-size: 18px;
+  }
+  .notfound-container .notfound-box {
+    max-width: 90%;
+  }
+  .notfound-container button,
+  .notfound-container .btn-danger {
+    width: 60%;
+    font-size: 14px;
+    height: 38px;
+  }
+}
+
+.copy {
+  color: white;
+  opacity: 0.1;
+  cursor: default;
+}

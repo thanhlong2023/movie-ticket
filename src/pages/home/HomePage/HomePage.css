@@ -1,0 +1,621 @@
+.home-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 24px;
+}
+
+.title-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+}
+
+.title-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #ef4444;
+  border-radius: 50%;
+}
+
+.view-all {
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.view-all:hover {
+  color: #ef4444;
+}
+
+.movie {
+  gap: 80px;
+  min-width: 0; /* Important for flex child to allow scrolling children */
+  width: 100%;
+}
+
+.list-movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Desktop only - hide on mobile/tablet */
+.desktop-only {
+  display: grid;
+}
+
+@media screen and (max-width: 991.98px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+.box-movie {
+  max-width: 230px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-container {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 290px;
+  width: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.box-movie:hover .img-container img {
+  transform: scale(1.08);
+}
+
+.description-movie {
+  color: #5d6a81;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.title-movie {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.discount {
+  max-width: 256px;
+  width: 100%;
+  gap: 32px;
+}
+
+.list-promotion {
+  gap: 30px;
+}
+
+.promo-img-container {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 256px;
+  height: 120px;
+}
+
+.promo-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.list-promotion a:hover .promo-img-container img {
+  transform: scale(1.08);
+}
+
+/* === RESPONSIVE DESIGN === */
+
+@media screen and (max-width: 1200px) {
+  .home-page {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .list-movies {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .list-movies img {
+    max-width: 100%;
+  }
+
+  .box-movie {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home-page {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .movie {
+    gap: 60px;
+  }
+
+  .list-movies {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .discount {
+    max-width: 100%;
+  }
+
+  .list-promotion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .list-promotion .promo-img-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2.13 / 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-page {
+    padding: 10px;
+    gap: 50px;
+  }
+
+  .movie {
+    gap: 40px;
+  }
+
+  .list-movies {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .list-movies .img-container {
+    height: auto;
+    aspect-ratio: 229 / 290;
+  }
+
+  .title-category {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .view-all {
+    font-size: 14px;
+  }
+
+  .list-promotion {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home-page {
+    padding: 0;
+    gap: 40px;
+  }
+
+  .movie {
+    gap: 20px;
+  }
+
+  .list-movies {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .title-category {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .title-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .view-all {
+    font-size: 13px;
+  }
+
+  .title-movie {
+    font-size: 14px;
+  }
+
+  .description-movie {
+    font-size: 12px;
+  }
+
+  .list-promotion {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .list-promotion .promo-img-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2.13 / 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .list-movies {
+    grid-template-columns: 1fr;
+  }
+
+  .list-movies img {
+    max-width: 100%;
+  }
+}
+
+.home-carousel-vertical-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Replicates the original gap from list-promotion */
+}
+
+.home-carousel-vertical-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Replicates the original gap from list-promotion */
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.promo-img-container {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 256px;
+  height: 120px;
+}
+
+.promo-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.1s ease;
+}
+
+.home-carousel-vertical-container a:hover .promo-img-container img {
+  transform: scale(1.08);
+}
+
+.home-carousel-vertical-content.carousel-animation-out {
+  animation: slideOutToLeft 0.3s ease forwards;
+}
+
+.home-carousel-vertical-content.carousel-animation-in {
+  animation: slideInFromRight 0.3s ease forwards;
+}
+
+/* === SWIPER CUSTOM STYLES for Mobile/Tablet === */
+.swiper-container-custom {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.mySwiper {
+  width: 100%;
+  /* Extra padding to avoid cutting off shadows/scaling */
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.swiper-slide-custom {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  filter: blur(2px); /* Blur non-active slides slightly for effect */
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-slide-active {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.swiper-slide-custom .box-movie {
+  max-width: 100%;
+}
+
+/* Adjust slide width for smaller screens */
+@media screen and (max-width: 576px) {
+  .swiper-slide-custom {
+    width: 70%;
+  }
+}
+
+/* ================================
+   NOW PLAYING SWIPER - STACKED COVERFLOW
+   Matching the screenshot design
+================================ */
+.now-playing-swiper {
+  width: 100%;
+  position: relative;
+  overflow: visible !important;
+}
+
+@media screen and (max-width: 768px) {
+  .now-playing-swiper {
+    padding: 20px 0 40px !important;
+    z-index: 100; /* Ensure it stays on top */
+  }
+}
+
+.nowPlayingSwiper {
+  width: 100%;
+  overflow: visible;
+  position: relative;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* MOBILE: Show 3 cards - center full + 2 sides at 2/3 */
+.nowPlayingSlide {
+  width: 48vw;
+  max-width: 200px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stacking effect: side slides go behind and scale down */
+.nowPlayingSlide {
+  opacity: 0.85;
+  transform: scale(0.78);
+  z-index: 1;
+}
+
+/* Active (center) slide: full size, prominent */
+.nowPlayingSwiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+/* Adjacent slides (next/prev): medium visibility */
+.nowPlayingSwiper .swiper-slide-prev,
+.nowPlayingSwiper .swiper-slide-next {
+  opacity: 0.6;
+  transform: scale(0.85);
+  z-index: 5;
+}
+
+/* Card styling */
+.nowPlayingSlide .box-movie {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-box-reflect: below 10px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+/* Poster with proper aspect ratio and shadow */
+.nowPlayingSlide .img-container {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 2 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark gradient overlay at bottom for text readability */
+.nowPlayingSlide .img-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  pointer-events: none;
+}
+
+/* Position text as overlay inside the card */
+.nowPlayingSlide .title-movie,
+.nowPlayingSlide .description-movie {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  text-align: center;
+  z-index: 2;
+  margin: 0;
+}
+
+/* Title styling - bold, white, uppercase */
+.nowPlayingSlide .title-movie {
+  bottom: 36px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  line-height: 1.3;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Subtitle - age rating and format */
+.nowPlayingSlide .description-movie {
+  bottom: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Hide category/date in overlay, show only title */
+.nowPlayingSlide .img-container .description-movie {
+  display: none !important;
+}
+
+/* TABLET: Show 5 cards - center + 4 sides with outermost partially visible */
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .nowPlayingSlide {
+    width: 200px; /* Reduced from 45vw/340px to match standard card size approx */
+    max-width: 200px;
+  }
+
+  .nowPlayingSlide .title-movie {
+    font-size: 16px;
+    bottom: 30px;
+  }
+
+  .nowPlayingSlide .description-movie {
+    font-size: 12px;
+    bottom: 12px;
+  }
+
+  /* Show more slides on tablet */
+  .nowPlayingSlide {
+    opacity: 0.5;
+    transform: scale(0.9); /* Less severe scaling */
+  }
+
+  .nowPlayingSwiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.1); /* Slight pop for active */
+  }
+
+  .nowPlayingSwiper .swiper-slide-prev,
+  .nowPlayingSwiper .swiper-slide-next {
+    opacity: 0.8;
+    transform: scale(1);
+    z-index: 5;
+  }
+}
+
+/* Compact mode: hide external description, keep only overlay text */
+@media screen and (max-width: 991.98px) {
+  .box-movie--compact > .description-movie:not([style*="position"]) {
+    display: none !important;
+  }
+
+  .box-movie--compact > .title-movie:not([style*="position"]) {
+    display: none !important;
+  }
+}
+
+/* Hide category/date below image in carousel, but keep title */
+.nowPlayingSlide .box-movie > .description-movie {
+  display: none !important;
+}
+
+/* Horizontal Scroll for Upcoming Movies (Tablet/Mobile) */
+@media screen and (max-width: 1000px) {
+  .upcoming-list {
+    display: flex !important;
+    overflow-x: auto;
+    grid-template-columns: none !important;
+    padding-bottom: 20px;
+    gap: 16px !important;
+    scroll-behavior: smooth;
+    /* Hide scrollbar for cleaner look if desired, or style it */
+    scrollbar-width: thin;
+    scrollbar-color: #ef4444 #10141b;
+  }
+
+  .upcoming-list::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .upcoming-list::-webkit-scrollbar-track {
+    background: #10141b;
+  }
+
+  .upcoming-list::-webkit-scrollbar-thumb {
+    background-color: #ef4444;
+    border-radius: 10px;
+  }
+
+  .upcoming-list .box-movie {
+    min-width: 180px;
+    width: 180px;
+    flex-shrink: 0;
+  }
+
+  .upcoming-list .img-container {
+    height: 270px; /* Force consistent height */
+  }
+}
+
+/* Isolated Static Promotion Styles */
+.static-promo-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.static-promo-img-container {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+.static-promo-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+  display: block;
+}
+
+.static-promo-link:hover .static-promo-img-container img {
+  transform: scale(1.08);
+}
