@@ -21,13 +21,13 @@ function HomeFooter() {
       <div className="footer-socials">
         <div className="boba">
           <a href="#" aria-label="Facebook">
-            <img src="/public/logos/logo-fb.png" alt="Facebook" />
+            <img src="/logos/logo-fb.png" alt="Facebook" />
           </a>
           <a href="#" aria-label="Zalo">
-            <img src="/public/logos/logo-zalo.png" alt="Zalo" />
+            <img src="/logos/logo-zalo.png" alt="Zalo" />
           </a>
           <a href="#" aria-label="YouTube">
-            <img src="/public/logos/logo-yt.png" alt="YouTube" />
+            <img src="/logos/logo-yt.png" alt="YouTube" />
           </a>
         </div>
         <div className="footer-apps">
@@ -36,10 +36,10 @@ function HomeFooter() {
             aria-label="Tải trên Google Play"
             className="footer-badge"
           >
-            <img src="/public/logos/logo-play.png" alt="Tải trên Google Play" />
+            <img src="/logos/logo-play.png" alt="Tải trên Google Play" />
           </a>
           <a href="#" aria-label="Tải trên App Store" className="footer-badge">
-            <img src="/public/logos/logo-app.png" alt="Tải trên App Store" />
+            <img src="/logos/logo-app.png" alt="Tải trên App Store" />
           </a>
           <a
             href="#"
@@ -47,7 +47,7 @@ function HomeFooter() {
             className="footer-badge footer-badge--bct"
           >
             <img
-              src="/public/logos/logo-ct.png"
+              src="/logos/logo-ct.png"
               alt="Đã thông báo Bộ Công Thương"
             />
           </a>

@@ -2,19 +2,19 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "/public/image-carousel/carousel1.jpg",
+    image: "/image-carousel/carousel1.jpg",
   },
   {
-    image: "/public/image-carousel/carousel2.webp",
+    image: "/image-carousel/carousel2.webp",
   },
   {
-    image: "/public/image-carousel/carousel3.webp",
+    image: "/image-carousel/carousel3.webp",
   },
   {
-    image: "/public/image-carousel/carousel4.webp",
+    image: "/image-carousel/carousel4.webp",
   },
   {
-    image: "/public/image-carousel/carousel6.webp",
+    image: "/image-carousel/carousel6.webp",
   },
 ];
 

@@ -71,7 +71,7 @@ function HomeHeader({
             style={{ cursor: "pointer", zIndex: 1000 }}
           >
             <img
-              src="/public/logos/Logo_của_Trung_tâm_Chiếu_phim_Quốc_gia.png"
+              src="/logos/Logo_của_Trung_tâm_Chiếu_phim_Quốc_gia.png"
               alt="NCC Logo"
               style={{
                 width: "60px",

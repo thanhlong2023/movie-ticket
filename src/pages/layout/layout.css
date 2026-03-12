@@ -636,9 +636,6 @@
     display: flex !important;
   }
 
-
-  @keyframes fadeInMenu {
-
   @keyframes fadeInMenu {
     from {
       opacity: 0;
